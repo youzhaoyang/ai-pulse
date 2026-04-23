@@ -1,0 +1,380 @@
+[
+  {
+    "id": "sam-altman",
+    "name": "Sam Altman",
+    "cn": "萨姆·奥特曼",
+    "role": "CEO",
+    "org": "OpenAI",
+    "cat": "ceo",
+    "x": "sama",
+    "feeds": [
+      "https://blog.samaltman.com/feed"
+    ],
+    "flag": "🇺🇸",
+    "bio": "OpenAI CEO，推动 GPT 系列和 ChatGPT 发展，引领 AI 商业化浪潮"
+  },
+  {
+    "id": "dario-amodei",
+    "name": "Dario Amodei",
+    "cn": "达里奥·阿莫代伊",
+    "role": "CEO",
+    "org": "Anthropic",
+    "cat": "ceo",
+    "x": "DarioAmodei",
+    "feeds": [
+      "https://www.anthropic.com/rss.xml"
+    ],
+    "flag": "🇺🇸",
+    "bio": "Anthropic CEO，Claude 模型缔造者，AI 安全先驱"
+  },
+  {
+    "id": "demis-hassabis",
+    "name": "Demis Hassabis",
+    "cn": "德米斯·哈萨比斯",
+    "role": "CEO",
+    "org": "Google DeepMind",
+    "cat": "ceo",
+    "x": "demishassabis",
+    "feeds": [],
+    "flag": "🇬🇧",
+    "bio": "Google DeepMind CEO，AlphaGo/AlphaFold 创造者，诺贝尔化学奖得主"
+  },
+  {
+    "id": "jensen-huang",
+    "name": "Jensen Huang",
+    "cn": "黄仁勋",
+    "role": "CEO",
+    "org": "NVIDIA",
+    "cat": "ceo",
+    "x": "",
+    "feeds": [
+      "https://blogs.nvidia.com/feed/"
+    ],
+    "flag": "🇺🇸",
+    "bio": "NVIDIA 创始人兼 CEO，GPU 算力革命推动者"
+  },
+  {
+    "id": "satya-nadella",
+    "name": "Satya Nadella",
+    "cn": "萨提亚·纳德拉",
+    "role": "CEO",
+    "org": "Microsoft",
+    "cat": "ceo",
+    "x": "satyanadella",
+    "feeds": [],
+    "flag": "🇺🇸",
+    "bio": "Microsoft CEO，主导 OpenAI 投资，推动 Copilot AI 战略"
+  },
+  {
+    "id": "sundar-pichai",
+    "name": "Sundar Pichai",
+    "cn": "桑达尔·皮查伊",
+    "role": "CEO",
+    "org": "Google / Alphabet",
+    "cat": "ceo",
+    "x": "sundarpichai",
+    "feeds": [],
+    "flag": "🇺🇸",
+    "bio": "Google CEO，主导 Gemini 模型和 Google AI 战略"
+  },
+  {
+    "id": "mark-zuckerberg",
+    "name": "Mark Zuckerberg",
+    "cn": "马克·扎克伯格",
+    "role": "CEO",
+    "org": "Meta",
+    "cat": "ceo",
+    "x": "faborerg",
+    "feeds": [
+      "https://ai.meta.com/blog/rss/"
+    ],
+    "flag": "🇺🇸",
+    "bio": "Meta CEO，推动开源 LLaMA 模型和 Meta AI 生态"
+  },
+  {
+    "id": "elon-musk",
+    "name": "Elon Musk",
+    "cn": "埃隆·马斯克",
+    "role": "CEO",
+    "org": "xAI / Tesla",
+    "cat": "ceo",
+    "x": "elonmusk",
+    "feeds": [],
+    "flag": "🇺🇸",
+    "bio": "xAI 创始人（Grok 模型），Tesla & SpaceX CEO"
+  },
+  {
+    "id": "mustafa-suleyman",
+    "name": "Mustafa Suleyman",
+    "cn": "穆斯塔法·苏莱曼",
+    "role": "CEO, Microsoft AI",
+    "org": "Microsoft",
+    "cat": "ceo",
+    "x": "mustafasuleyman",
+    "feeds": [],
+    "flag": "🇬🇧",
+    "bio": "Microsoft AI CEO，DeepMind 联合创始人"
+  },
+  {
+    "id": "clement-delangue",
+    "name": "Clément Delangue",
+    "cn": "克莱门特·德朗格",
+    "role": "CEO",
+    "org": "Hugging Face",
+    "cat": "ceo",
+    "x": "ClementDelangue",
+    "feeds": [
+      "https://huggingface.co/blog/feed.xml"
+    ],
+    "flag": "🇫🇷",
+    "bio": "Hugging Face CEO，开源 AI 社区领导者"
+  },
+  {
+    "id": "arthur-mensch",
+    "name": "Arthur Mensch",
+    "cn": "阿瑟·门施",
+    "role": "CEO",
+    "org": "Mistral AI",
+    "cat": "ceo",
+    "x": "arthurmensch",
+    "feeds": [],
+    "flag": "🇫🇷",
+    "bio": "Mistral AI CEO，欧洲最强 AI 独角兽"
+  },
+  {
+    "id": "alexandr-wang",
+    "name": "Alexandr Wang",
+    "cn": "亚历山大·王",
+    "role": "CEO",
+    "org": "Scale AI",
+    "cat": "ceo",
+    "x": "alexandr_wang",
+    "feeds": [],
+    "flag": "🇺🇸",
+    "bio": "Scale AI CEO，AI 数据基础设施领导者"
+  },
+  {
+    "id": "aidan-gomez",
+    "name": "Aidan Gomez",
+    "cn": "艾丹·戈麦斯",
+    "role": "CEO",
+    "org": "Cohere",
+    "cat": "ceo",
+    "x": "aidangomez",
+    "feeds": [],
+    "flag": "🇨🇦",
+    "bio": "Cohere CEO，Transformer \"Attention is All You Need\" 联合作者"
+  },
+  {
+    "id": "liang-wenfeng",
+    "name": "Liang Wenfeng",
+    "cn": "梁文锋",
+    "role": "创始人",
+    "org": "DeepSeek",
+    "cat": "ceo",
+    "x": "",
+    "feeds": [],
+    "flag": "🇨🇳",
+    "bio": "DeepSeek 创始人，DeepSeek-V3/R1 缔造者"
+  },
+  {
+    "id": "robin-li",
+    "name": "Robin Li",
+    "cn": "李彦宏",
+    "role": "CEO",
+    "org": "Baidu",
+    "cat": "ceo",
+    "x": "",
+    "feeds": [],
+    "flag": "🇨🇳",
+    "bio": "百度 CEO，推动文心一言大模型和中国 AI 产业"
+  },
+  {
+    "id": "kai-fu-lee",
+    "name": "Kai-Fu Lee",
+    "cn": "李开复",
+    "role": "CEO",
+    "org": "01.AI (零一万物)",
+    "cat": "ceo",
+    "x": "kaaborlee",
+    "feeds": [],
+    "flag": "🇨🇳",
+    "bio": "01.AI 创始人，创新工场创始人，AI 布道者"
+  },
+  {
+    "id": "yann-lecun",
+    "name": "Yann LeCun",
+    "cn": "杨立昆",
+    "role": "Chief AI Scientist",
+    "org": "Meta",
+    "cat": "researcher",
+    "x": "ylecun",
+    "feeds": [],
+    "flag": "🇫🇷",
+    "bio": "Meta 首席 AI 科学家，CNN 之父，2018 图灵奖"
+  },
+  {
+    "id": "geoffrey-hinton",
+    "name": "Geoffrey Hinton",
+    "cn": "杰弗里·辛顿",
+    "role": "名誉教授",
+    "org": "Univ. of Toronto",
+    "cat": "researcher",
+    "x": "",
+    "feeds": [],
+    "flag": "🇨🇦",
+    "bio": "\"AI 教父\"，深度学习先驱，图灵奖 & 诺贝尔物理学奖得主"
+  },
+  {
+    "id": "andrew-ng",
+    "name": "Andrew Ng",
+    "cn": "吴恩达",
+    "role": "创始人",
+    "org": "DeepLearning.AI",
+    "cat": "researcher",
+    "x": "AndrewYNg",
+    "feeds": [
+      "https://www.deeplearning.ai/the-batch/feed/"
+    ],
+    "flag": "🇺🇸",
+    "bio": "DeepLearning.AI 创始人，斯坦福教授，AI 教育布道者"
+  },
+  {
+    "id": "fei-fei-li",
+    "name": "Fei-Fei Li",
+    "cn": "李飞飞",
+    "role": "教授 & 联合主任",
+    "org": "Stanford HAI",
+    "cat": "researcher",
+    "x": "drfeifieli",
+    "feeds": [],
+    "flag": "🇺🇸",
+    "bio": "斯坦福 HAI 联合主任，ImageNet 创建者，World Labs 创始人"
+  },
+  {
+    "id": "ilya-sutskever",
+    "name": "Ilya Sutskever",
+    "cn": "伊利亚·苏茨凯维尔",
+    "role": "联合创始人",
+    "org": "SSI",
+    "cat": "researcher",
+    "x": "ilyasut",
+    "feeds": [],
+    "flag": "🇨🇦",
+    "bio": "SSI 联合创始人，OpenAI 前首席科学家"
+  },
+  {
+    "id": "jan-leike",
+    "name": "Jan Leike",
+    "cn": "扬·莱克",
+    "role": "Alignment Lead",
+    "org": "Anthropic",
+    "cat": "researcher",
+    "x": "janleike",
+    "feeds": [],
+    "flag": "🇩🇪",
+    "bio": "Anthropic 对齐研究负责人"
+  },
+  {
+    "id": "andrej-karpathy",
+    "name": "Andrej Karpathy",
+    "cn": "安德烈·卡帕西",
+    "role": "创始人",
+    "org": "Eureka Labs",
+    "cat": "engineer",
+    "x": "karpathy",
+    "feeds": [
+      "https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ"
+    ],
+    "flag": "🇨🇦",
+    "bio": "Eureka Labs 创始人，前 Tesla AI 总监，顶级 AI 教育者"
+  },
+  {
+    "id": "greg-brockman",
+    "name": "Greg Brockman",
+    "cn": "格雷格·布罗克曼",
+    "role": "联合创始人",
+    "org": "OpenAI",
+    "cat": "engineer",
+    "x": "gdb",
+    "feeds": [],
+    "flag": "🇺🇸",
+    "bio": "OpenAI 联合创始人兼前总裁"
+  },
+  {
+    "id": "jim-fan",
+    "name": "Jim Fan",
+    "cn": "范劼",
+    "role": "Sr. Research Scientist",
+    "org": "NVIDIA",
+    "cat": "engineer",
+    "x": "DrJimFan",
+    "feeds": [],
+    "flag": "🇺🇸",
+    "bio": "NVIDIA 高级研究科学家，具身智能研究者"
+  },
+  {
+    "id": "francois-chollet",
+    "name": "François Chollet",
+    "cn": "弗朗索瓦·肖莱",
+    "role": "创始人",
+    "org": "ARC Prize / Keras",
+    "cat": "engineer",
+    "x": "fchollet",
+    "feeds": [],
+    "flag": "🇫🇷",
+    "bio": "Keras 创建者，ARC Prize 发起人"
+  },
+  {
+    "id": "chris-lattner",
+    "name": "Chris Lattner",
+    "cn": "克里斯·拉特纳",
+    "role": "CEO",
+    "org": "Modular",
+    "cat": "engineer",
+    "x": "clattner_llvm",
+    "feeds": [
+      "https://www.modular.com/blog/rss.xml"
+    ],
+    "flag": "🇺🇸",
+    "bio": "Modular/Mojo 创建者，LLVM/Swift 创造者"
+  },
+  {
+    "id": "peter-steinberger",
+    "name": "Peter Steinberger",
+    "cn": "彼得·施坦伯格",
+    "role": "创建者",
+    "org": "OpenClaw",
+    "cat": "creator",
+    "x": "steipete",
+    "feeds": [
+      "https://steipete.me/rss.xml"
+    ],
+    "flag": "🇦🇹",
+    "bio": "OpenClaw 创建者，PSPDFKit 创始人，全职开源人，AI Agent 先驱"
+  },
+  {
+    "id": "emad-mostaque",
+    "name": "Emad Mostaque",
+    "cn": "埃马德·莫斯塔克",
+    "role": "前 CEO",
+    "org": "Stability AI",
+    "cat": "creator",
+    "x": "EMostaque",
+    "feeds": [],
+    "flag": "🇬🇧",
+    "bio": "Stability AI 创始人，Stable Diffusion 推动者"
+  },
+  {
+    "id": "connor-leahy",
+    "name": "Connor Leahy",
+    "cn": "康纳·莱希",
+    "role": "CEO",
+    "org": "Conjecture",
+    "cat": "creator",
+    "x": "ConnorLeahy",
+    "feeds": [],
+    "flag": "🇩🇪",
+    "bio": "Conjecture CEO，EleutherAI 联合创始人，AI 安全倡导者"
+  }
+]
