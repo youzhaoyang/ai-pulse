@@ -1,6 +1,6 @@
 # Meshy Pro Plus / MAX 定价方案提案
 
-为 Meshy 商业化 PM 课题准备的可交互原型 · 朝阳
+为 Meshy 商业化 PM 课题准备的可交互原型 · 龙阳
 
 ## 内容
 
