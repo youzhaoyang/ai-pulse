@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Meshy Pro Plus 提案 — Index</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 48px 24px;
+    background: #0a0a0b;
+    color: #f5f5f7;
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    display: grid; place-items: center;
+  }
+  .wrap { max-width: 720px; width: 100%; }
+  .eyebrow {
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: #5de5d8; margin-bottom: 12px; font-family: monospace;
+  }
+  h1 {
+    font-size: 40px; font-weight: 700; letter-spacing: -0.025em;
+    margin: 0 0 12px; line-height: 1.1;
+  }
+  p.lede { color: #b5b5bd; font-size: 16px; margin: 0 0 36px; line-height: 1.55; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: #131316;
+    border: 1px solid #2a2a30;
+    border-radius: 14px;
+    padding: 22px 24px;
+    display: flex; align-items: center; gap: 18px;
+    transition: all 0.2s;
+    text-decoration: none; color: inherit;
+  }
+  .card:hover { background: #1a1a1f; border-color: #5de5d8; transform: translateY(-1px); }
+  .card .num {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    background: #1d1d22;
+    display: grid; place-items: center;
+    font-family: monospace; font-weight: 700; font-size: 18px;
+    color: #5de5d8;
+    flex-shrink: 0;
+  }
+  .card .body { flex: 1; min-width: 0; }
+  .card h3 { margin: 0 0 4px; font-size: 17px; font-weight: 600; letter-spacing: -0.01em; }
+  .card p { margin: 0; font-size: 13.5px; color: #88888f; }
+  .card .arrow { color: #5de5d8; font-size: 22px; }
+  footer {
+    margin-top: 48px;
+    color: #5a5a60;
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow">★ Meshy 商业化 PM 课题</div>
+    <h1>Pro Plus / MAX 新档位提案</h1>
+    <p class="lede">为高产出独立创作者设计的中间档位 — 两版设计稿，分别以 in-app 升级 modal 和完整定价页两种形态呈现。</p>
+
+    <div class="cards">
+      <a class="card" href="Pricing Modal.html">
+        <span class="num">01</span>
+        <div class="body">
+          <h3>Pricing Modal · In-App 升级弹窗</h3>
+          <p>主推版本 · 还原 Meshy 当前 UI 风格 · MAX 推荐档</p>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+      <a class="card" href="Pricing.html">
+        <span class="num">02</span>
+        <div class="body">
+          <h3>Pricing Page · 完整公开定价页</h3>
+          <p>定价计算器 + 定位象限图 + 详细对比表 + FAQ</p>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <footer>朝阳 · 2026</footer>
+  </div>
+</body>
+</html>

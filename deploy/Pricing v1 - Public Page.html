@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Meshy Pricing — Pro Plus (refined)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pricing.css">
+</head>
+<body>
+
+<!-- ============================================================
+     Top promotion banner
+     ============================================================ -->
+<div class="banner">
+  <span class="banner-tag">Prototype</span>
+  <span>Vibe-coded mockup of Meshy's pricing page with the proposed <strong>Pro Plus</strong> tier · not the live product</span>
+</div>
+
+<!-- ============================================================
+     Sticky nav
+     ============================================================ -->
+<header class="nav">
+  <div class="logo">
+    <span class="logo-mark">M</span>
+    <span>Meshy</span>
+  </div>
+  <nav class="nav-links">
+    <a href="#">Features</a>
+    <a href="#">API</a>
+    <a href="#" class="active">Pricing</a>
+    <a href="#">Community</a>
+    <a href="#">Resources</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="btn-ghost">Log in</button>
+    <button class="btn-primary">Sign Up Free</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     Hero
+     ============================================================ -->
+<section class="hero">
+  <div class="hero-eyebrow">
+    <span class="pulse"></span>
+    <span>New · Pro Plus tier now available</span>
+  </div>
+  <h1>Pricing built for<br><span class="accent">every kind of creator</span></h1>
+  <p class="lede">From hobbyists to studios shipping production assets — pick a plan that scales with your output. <strong>Pro Plus</strong> is our new home for high-output solo creators who outgrew Pro.</p>
+</section>
+
+<!-- ============================================================
+     Trust bar
+     ============================================================ -->
+<div class="trust-bar">
+  Trusted by leading studios
+  <div class="trust-logos">
+    <span>NEXON</span><span>DNEG</span><span>Meta</span><span>Supercell</span><span>Square Enix</span><span>Pico</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     Billing toggle
+     ============================================================ -->
+<div class="toggle-wrap">
+  <div class="billing-toggle" id="billing-toggle">
+    <span class="slider"></span>
+    <button class="active" data-bill="monthly">Monthly</button>
+    <button data-bill="yearly">Yearly</button>
+  </div>
+  <span class="save-pill">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 7v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V7l-8-5z" stroke="currentColor" stroke-width="2"/></svg>
+    SAVE 20%
+  </span>
+</div>
+
+<!-- ============================================================
+     Pricing cards
+     ============================================================ -->
+<section class="pricing-grid" data-reveal>
+
+  <!-- FREE -->
+  <div class="card">
+    <h3 class="tier-name">Free</h3>
+    <p class="tier-sub">Get started — no credit card needed.</p>
+    <div class="price-block">
+      <div class="price-main">
+        <span class="currency">$</span>
+        <span class="amount">0</span>
+        <span class="period">/month</span>
+      </div>
+      <div class="price-sub">Forever free</div>
+    </div>
+    <div class="credit-hero">
+      <span class="num">100</span>
+      <span class="mono" style="font-size:12px;color:var(--text-mute)">credits / mo</span>
+      <span class="lbl">~10 assets</span>
+    </div>
+    <button class="cta-btn outline">Get Started <span class="arrow">→</span></button>
+    <ul class="features">
+      <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#6c6c75" stroke-width="2" stroke-linecap="round"/></svg>1 concurrent task</li>
+      <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#6c6c75" stroke-width="2" stroke-linecap="round"/></svg>Low queue priority</li>
+      <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#6c6c75" stroke-width="2" stroke-linecap="round"/></svg>10 Meshy-4 downloads / mo</li>
+      <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#6c6c75" stroke-width="2" stroke-linecap="round"/></svg>CC BY 4.0 license</li>
+      <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#6c6c75" stroke-width="2" stroke-linecap="round"/></svg>20 animation presets</li>
+    </ul>
+  </div>
+
+  <!-- PRO -->
+  <div class="card popular">
+    <span class="card-badge popular">Most Popular</span>
+    <h3 class="tier-name">Pro</h3>
+    <p class="tier-sub">For individual creators starting their workflow.</p>
+    <div class="price-block">
+      <div class="price-main">
+        <span class="currency">$</span>
+        <span class="amount" data-monthly="20" data-yearly="16">20</span>
+        <span class="period">/month</span>
+      </div>
+      <div class="price-sub" data-monthly="Billed monthly" data-yearly='Billed yearly · <span class="save">save $48</span>'>Billed monthly</div>
+    </div>
+    <div class="credit-hero">
+      <span class="num">1,000</span>
+      <span class="mono" style="font-size:12px;color:var(--text-mute)">credits / mo</span>
+      <span class="lbl">~100 assets</span>
+    </div>
+    <button class="cta-btn">Subscribe <span class="arrow">→</span></button>
+    <ul class="features">
+      <div class="features-group-label">Generation</div>
+      <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#f5c451" stroke-width="2.2" stroke-linecap="round"/></svg><strong>10</strong>&nbsp;concurrent tasks</li>
+      <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#f5c451" stroke-width="2.2" stroke-linecap="round"/></svg>High queue priority</li>
+      <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#f5c451" stroke-width="2.2" stroke-linecap="round"/></svg>4 free retries / task</li>
+      <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#f5c451" stroke-width="2.2" stroke-linecap="round"/></svg>60% faster generation</li>
+      <div class="features-group-label">Usage & Access</div>
+      <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#f5c451" stroke-width="2.2" stroke-linecap="round"/></svg>Unlimited downloads</li>
+      <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#f5c451" stroke-width="2.2" stroke-linecap="round"/></svg>Private commercial license</li>
+      <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#f5c451" stroke-width="2.2" stroke-linecap="round"/></svg>API & DCC plugins</li>
+      <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#f5c451" stroke-width="2.2" stroke-linecap="round"/></svg>500+ animation presets</li>
+    </ul>
+  </div>
+
+  <!-- PRO PLUS — FEATURED -->
+  <div class="card featured">
+    <span class="card-badge featured">New · Power Solo</span>
+    <h3 class="tier-name">Pro Plus</h3>
+    <p class="tier-sub">For high-output solo creators who outgrew Pro — without paying for a team plan.</p>
+    <div class="price-block">
+      <div class="price-main">
+        <span class="currency">$</span>
+        <span class="amount" data-monthly="35" data-yearly="28">35</span>
+        <span class="period">/month</span>
+      </div>
+      <div class="price-sub" data-monthly="Billed monthly" data-yearly='Billed yearly · <span class="save">save $84</span>'>Billed monthly</div>
+    </div>
+    <div class="credit-hero">
+      <span class="num">2,500</span>
+      <span class="mono" style="font-size:12px;color:var(--text-mute)">credits / mo</span>
+      <span class="lbl">~250 assets</span>
+    </div>
+    <button class="cta-btn featured">Subscribe <span class="arrow">→</span></button>
+    <ul class="features">
+      <div class="features-group-label">Everything in Pro, plus</div>
+      <li class="highlight"><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#00d4a3" stroke-width="2.4" stroke-linecap="round"/></svg><strong>15</strong>&nbsp;concurrent tasks <span class="dim">(+5)</span></li>
+      <li class="highlight"><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#00d4a3" stroke-width="2.4" stroke-linecap="round"/></svg>Higher queue priority</li>
+      <li class="highlight"><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#00d4a3" stroke-width="2.4" stroke-linecap="round"/></svg>6 free retries / task</li>
+      <li class="highlight"><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#00d4a3" stroke-width="2.4" stroke-linecap="round"/></svg><strong>7-day</strong> API asset retention</li>
+      <li class="highlight"><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#00d4a3" stroke-width="2.4" stroke-linecap="round"/></svg><strong>Workspace Privacy Mode</strong></li>
+      <li class="highlight"><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#00d4a3" stroke-width="2.4" stroke-linecap="round"/></svg>Priority email support</li>
+    </ul>
+  </div>
+
+  <!-- STUDIO -->
+  <div class="card">
+    <h3 class="tier-name">Studio</h3>
+    <p class="tier-sub">For studios and teams — single seat works too.</p>
+    <div class="price-block">
+      <div class="price-main">
+        <span class="currency">$</span>
+        <span class="amount" data-monthly="60" data-yearly="48">60</span>
+        <span class="period">/user/mo</span>
+      </div>
+      <div class="price-sub" data-monthly="Billed monthly per user" data-yearly='Billed yearly · <span class="save">save $144/seat</span>'>Billed monthly per user</div>
+    </div>
+    <div class="credit-hero">
+      <span class="num">4,000</span>
+      <span class="mono" style="font-size:12px;color:var(--text-mute)">/ user</span>
+      <span class="lbl">~400 assets</span>
+    </div>
+    <button class="cta-btn">Subscribe <span class="arrow">→</span></button>
+    <ul class="features">
+      <div class="features-group-label">Everything in Pro Plus, plus</div>
+      <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#ff5a1f" stroke-width="2.2" stroke-linecap="round"/></svg><strong>20</strong>&nbsp;concurrent tasks</li>
+      <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#ff5a1f" stroke-width="2.2" stroke-linecap="round"/></svg>8 free retries / task</li>
+      <div class="features-group-label">Team features</div>
+      <li class="highlight"><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#ff5a1f" stroke-width="2.2" stroke-linecap="round"/></svg><strong>Team management</strong></li>
+      <li class="highlight"><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#ff5a1f" stroke-width="2.2" stroke-linecap="round"/></svg><strong>Shared team credits</strong></li>
+      <li class="highlight"><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#ff5a1f" stroke-width="2.2" stroke-linecap="round"/></svg><strong>Centralized billing</strong></li>
+      <li><svg class="check-svg" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#ff5a1f" stroke-width="2.2" stroke-linecap="round"/></svg>Team model annotations</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- ============================================================
+     Enterprise strip
+     ============================================================ -->
+<section class="enterprise-strip" data-reveal>
+  <div class="enterprise-card">
+    <div class="enterprise-info">
+      <h3>Enterprise</h3>
+      <p>For organizations with large-volume needs, security requirements, and dedicated support.</p>
+    </div>
+    <div class="enterprise-features">
+      <span>Custom credits</span>
+      <span>50+ concurrent</span>
+      <span>SAML SSO</span>
+      <span>Forever retention</span>
+    </div>
+    <button class="cta-btn brand">Contact Sales <span class="arrow">→</span></button>
+  </div>
+</section>
+
+<!-- ============================================================
+     Credit Calculator — interactive
+     ============================================================ -->
+<section class="calculator-section" data-reveal>
+  <div class="calc-header">
+    <div class="eyebrow">▲ Find your plan</div>
+    <h2>How many assets do you make a month?</h2>
+    <p>Drag the slider. We'll recommend a plan based on your output and what those credits actually get you.</p>
+  </div>
+
+  <div class="calc-card">
+    <div class="calc-left">
+      <h3>Your monthly output</h3>
+      <div class="calc-readout">
+        <span id="calc-readout">120</span>
+        <span class="unit">assets</span>
+      </div>
+      <div class="calc-readout-sub" id="calc-sub">~1,200 credits/month</div>
+      <div class="calc-slider-wrap">
+        <input type="range" class="slider" id="calc-slider" min="5" max="500" value="120" step="5">
+        <div class="calc-slider-marks">
+          <span>5</span><span>50</span><span>100</span><span>250</span><span>500+</span>
+        </div>
+      </div>
+      <p style="font-size:12.5px;color:var(--text-mute);margin:18px 0 0;line-height:1.5">
+        Based on Meshy-4 default settings (~10 credits per generated asset). Heavier workflows like rigged animations use more.
+      </p>
+    </div>
+
+    <div class="calc-rec is-pro-plus" id="calc-rec">
+      <div class="calc-rec-label">Recommended for you</div>
+      <h4 class="calc-rec-tier" id="rec-tier">Pro Plus</h4>
+      <p class="calc-rec-why" id="rec-why">Your output level is exactly where Pro Plus is designed to live — extra credits, concurrency, and privacy without paying for a team.</p>
+      <div class="calc-rec-stats">
+        <div class="calc-rec-stat">
+          <span class="v" id="rec-credits">2,500</span>
+          <span class="k">credits / mo</span>
+        </div>
+        <div class="calc-rec-stat">
+          <span class="v" id="rec-concurrent">15</span>
+          <span class="k">concurrent tasks</span>
+        </div>
+        <div class="calc-rec-stat">
+          <span class="v" id="rec-price">$28/mo</span>
+          <span class="k">billed yearly</span>
+        </div>
+        <div class="calc-rec-stat">
+          <span class="v" id="rec-savings">Save $84/yr</span>
+          <span class="k">vs monthly</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Why Pro Plus — positioning chart
+     ============================================================ -->
+<section class="why-section" data-reveal>
+  <div class="why-card">
+    <div class="why-tag">★ Why we added Pro Plus</div>
+    <h3>The "high-output solo" gap</h3>
+    <p class="lede">If you've been adding <strong>$30+ of extra credits every month</strong>, or running <strong>150+ generations a week on Pro</strong> — you're hitting the wall thousands of indie devs, freelance 3D artists, and solo content creators hit. Studio's per-seat team plan isn't designed for you. Pro Plus is.</p>
+
+    <div class="why-layout">
+
+      <!-- Positioning chart -->
+      <div class="position-chart">
+        <h4>Plan positioning · output vs. team size</h4>
+        <div class="chart-area">
+          <!-- The "gap" Pro Plus fills -->
+          <div class="chart-gap" style="left: 60%; top: 75%;"></div>
+
+          <!-- Dots positioned by (x: output, y: team size, inverted) -->
+          <div class="chart-dot free"    data-label="Free"      style="left: 8%;  top: 92%;"></div>
+          <div class="chart-dot pro"     data-label="Pro"       style="left: 30%; top: 80%;"></div>
+          <div class="chart-dot proplus" data-label="Pro Plus"  style="left: 60%; top: 75%;"></div>
+          <div class="chart-dot studio"  data-label="Studio"    style="left: 65%; top: 35%;"></div>
+          <div class="chart-dot enterprise" data-label="Enterprise" style="left: 92%; top: 10%;"></div>
+
+          <span class="chart-axis x-low">Low output</span>
+          <span class="chart-axis x-high">High output</span>
+          <span class="chart-axis y-low">Solo</span>
+          <span class="chart-axis y-high">Team</span>
+        </div>
+        <p style="font-size:11.5px;color:var(--text-faint);margin:32px 0 0;font-family:'Geist Mono',monospace;letter-spacing:0.02em;line-height:1.5">
+          Pro maxes out around 100 assets/mo. Studio assumes a team. Pro Plus fills the empty quadrant — heavy individual output, no team overhead.
+        </p>
+      </div>
+
+      <!-- Stats comparison -->
+      <div class="why-stats">
+        <div class="why-stat-block">
+          <h4>vs. Pro · How it scales you up</h4>
+          <ul class="why-stat-list">
+            <li>Credits / month <span class="val up">1,000 → 2,500</span></li>
+            <li>Concurrent tasks <span class="val up">10 → 15</span></li>
+            <li>Queue priority <span class="val up">High → Higher</span></li>
+            <li>API asset retention <span class="val up">3d → 7d</span></li>
+            <li>Workspace Privacy Mode <span class="val up">+ NEW</span></li>
+            <li>Price (yearly) <span class="val">$16 → $28 / mo</span></li>
+          </ul>
+        </div>
+        <div class="why-stat-block">
+          <h4>vs. Studio · Why it's right for solo</h4>
+          <ul class="why-stat-list">
+            <li>Per-user pricing <span class="val">single user, no math</span></li>
+            <li>Team management <span class="val same">— not needed</span></li>
+            <li>Shared team credits <span class="val same">— Studio's value</span></li>
+            <li>Cost (yearly) <span class="val up">$336 vs $576/yr</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Compare table
+     ============================================================ -->
+<section class="compare-wrap" data-reveal>
+  <div class="compare-head">
+    <h2>Compare plans</h2>
+    <p>Side-by-side breakdown of credits, concurrency, and features across all five tiers. Hover a column to focus it.</p>
+  </div>
+
+  <div class="compare-scroller">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Free</th>
+          <th class="col-popular">Pro</th>
+          <th class="col-featured">Pro Plus</th>
+          <th>Studio</th>
+          <th>Enterprise</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="group-row"><td colspan="6">Fundamental</td></tr>
+        <tr>
+          <td class="row-label">Credits / month</td>
+          <td class="num-mono">100</td>
+          <td class="num-mono">1,000</td>
+          <td class="num-mono featured-col"><strong>2,500</strong></td>
+          <td class="num-mono">4,000 / user</td>
+          <td>Custom</td>
+        </tr>
+        <tr>
+          <td class="row-label">Assets / month (approx)</td>
+          <td class="num-mono">~10</td>
+          <td class="num-mono">~100</td>
+          <td class="num-mono featured-col"><strong>~250</strong></td>
+          <td class="num-mono">~400 / user</td>
+          <td>Custom</td>
+        </tr>
+        <tr>
+          <td class="row-label">Concurrent tasks</td>
+          <td class="num-mono">1</td>
+          <td class="num-mono">10</td>
+          <td class="num-mono featured-col"><strong>15</strong></td>
+          <td class="num-mono">20</td>
+          <td class="num-mono">50+</td>
+        </tr>
+        <tr>
+          <td class="row-label">Queue priority</td>
+          <td>Low</td>
+          <td>High</td>
+          <td class="featured-col"><strong>Higher</strong></td>
+          <td>Higher</td>
+          <td>Highest</td>
+        </tr>
+        <tr>
+          <td class="row-label">Generation speed</td>
+          <td class="dash">—</td>
+          <td>60% faster</td>
+          <td class="featured-col">60% faster</td>
+          <td>60% faster</td>
+          <td>60% faster</td>
+        </tr>
+        <tr>
+          <td class="row-label">Free retries / task</td>
+          <td class="dash">—</td>
+          <td class="num-mono">4</td>
+          <td class="num-mono featured-col"><strong>6</strong></td>
+          <td class="num-mono">8</td>
+          <td>Unlimited</td>
+        </tr>
+        <tr>
+          <td class="row-label">Asset license</td>
+          <td>CC BY 4.0</td>
+          <td>Private</td>
+          <td class="featured-col">Private</td>
+          <td>Private</td>
+          <td>Private</td>
+        </tr>
+
+        <tr class="group-row"><td colspan="6">API & Integrations</td></tr>
+        <tr>
+          <td class="row-label">API access</td>
+          <td class="dash">—</td>
+          <td class="check"></td>
+          <td class="check featured-col"></td>
+          <td class="check"></td>
+          <td>Full</td>
+        </tr>
+        <tr>
+          <td class="row-label">DCC plugins (Blender / Unity / Maya…)</td>
+          <td class="dash">—</td>
+          <td class="check"></td>
+          <td class="check featured-col"></td>
+          <td class="check"></td>
+          <td class="check"></td>
+        </tr>
+        <tr>
+          <td class="row-label">API asset retention</td>
+          <td class="dash">—</td>
+          <td>3 days</td>
+          <td class="featured-col"><strong>7 days</strong></td>
+          <td>3 days</td>
+          <td>Forever</td>
+        </tr>
+
+        <tr class="group-row"><td colspan="6">Workspace & Collaboration</td></tr>
+        <tr>
+          <td class="row-label">Team workspaces</td>
+          <td class="dash">—</td>
+          <td class="dash">—</td>
+          <td class="dash featured-col">—</td>
+          <td>Single</td>
+          <td>Multiple</td>
+        </tr>
+        <tr>
+          <td class="row-label">Shared team credits</td>
+          <td class="dash">—</td>
+          <td class="dash">—</td>
+          <td class="dash featured-col">—</td>
+          <td class="check"></td>
+          <td class="check"></td>
+        </tr>
+        <tr>
+          <td class="row-label">Centralized billing</td>
+          <td class="dash">—</td>
+          <td class="dash">—</td>
+          <td class="dash featured-col">—</td>
+          <td class="check"></td>
+          <td class="check"></td>
+        </tr>
+        <tr>
+          <td class="row-label">Workspace Privacy Mode</td>
+          <td class="dash">—</td>
+          <td class="dash">—</td>
+          <td class="check featured-col"></td>
+          <td class="check"></td>
+          <td>Advanced</td>
+        </tr>
+
+        <tr class="group-row"><td colspan="6">Support</td></tr>
+        <tr>
+          <td class="row-label">Support channel</td>
+          <td>Discord</td>
+          <td>Discord + Chat</td>
+          <td class="featured-col"><strong>Chat + Priority Email</strong></td>
+          <td>Email</td>
+          <td>Dedicated</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section class="faq-section" data-reveal>
+  <div class="faq-head">
+    <h2>Common questions</h2>
+    <p>Everything you'd ask before subscribing.</p>
+  </div>
+  <div class="faq-list">
+
+    <div class="faq-item open">
+      <button class="q">
+        <span>How is Pro Plus different from Pro?</span>
+        <span class="toggle-icon">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </span>
+      </button>
+      <div class="a"><div class="a-inner">
+        Pro Plus gives you <strong>2.5× the credits</strong> (2,500 vs 1,000), 50% more concurrent tasks (15 vs 10), higher queue priority, longer API asset retention (7 days), and a new Workspace Privacy Mode — all for about $12/mo more on yearly billing. It's designed for the moment you start buying credit top-ups every month on Pro.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="q">
+        <span>Why not just buy more credit top-ups on Pro?</span>
+        <span class="toggle-icon">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </span>
+      </button>
+      <div class="a"><div class="a-inner">
+        You can — but top-ups cost roughly $1.50 per 100 credits. Pro Plus delivers an extra 1,500 credits/mo plus higher concurrency, priority, and retention features for ~$12/mo. If you've topped up twice in the last three months, Pro Plus is already cheaper.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="q">
+        <span>What is Workspace Privacy Mode?</span>
+        <span class="toggle-icon">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </span>
+      </button>
+      <div class="a"><div class="a-inner">
+        Privacy Mode keeps your generated assets out of the community feed and excludes them from anonymous model-training opt-in. Useful for client work under NDA, unannounced game assets, and anything you'd rather not show publicly.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="q">
+        <span>Can I upgrade or downgrade anytime?</span>
+        <span class="toggle-icon">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </span>
+      </button>
+      <div class="a"><div class="a-inner">
+        Yes. Upgrades take effect immediately and we prorate the difference. Downgrades take effect at the end of your current billing period. Unused credits from your previous plan carry over for 30 days.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="q">
+        <span>Do credits roll over to next month?</span>
+        <span class="toggle-icon">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </span>
+      </button>
+      <div class="a"><div class="a-inner">
+        Monthly subscription credits expire at the end of each cycle. Pay-as-you-go top-up credits roll over for 12 months. Yearly subscriptions deposit the full annual credit allotment up front, with a soft monthly throttle to keep workloads steady.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="q">
+        <span>What if my needs change month-to-month?</span>
+        <span class="toggle-icon">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </span>
+      </button>
+      <div class="a"><div class="a-inner">
+        Pick the plan that matches your <em>average</em> month and use top-up credits when you spike. Yearly billing is the best value if you generate consistently; monthly is best if your workload is bursty.
+      </div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA strip
+     ============================================================ -->
+<section class="cta-strip" data-reveal>
+  <div class="cta-strip-inner">
+    <h2>Ready to ship more assets?</h2>
+    <p>Start free, upgrade when you outgrow it. No credit card needed to try.</p>
+    <div class="actions">
+      <button class="cta-btn featured" style="margin:0;width:auto;padding:12px 22px">Start with Pro Plus <span class="arrow">→</span></button>
+      <button class="cta-btn outline" style="margin:0;width:auto;padding:12px 22px">Get Started Free</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p class="footer-note">A Vibe-Coding prototype for the Meshy Monetization PM assignment.</p>
+  <p>Not affiliated with Meshy · Designed by 朝阳 · 2026.05</p>
+</footer>
+
+<script src="pricing.js"></script>
+</body>
+</html>
