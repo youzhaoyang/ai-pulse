@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LibTV 团队版四场访谈汇报面板</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --ink: #17202f;
+      --muted: #657080;
+      --faint: #8b95a5;
+      --line: #e7ebf0;
+      --paper: #fbfcfe;
+      --panel: #ffffff;
+      --soft-gray: #f4f6f8;
+      --blue: #3358d4;
+      --blue-bg: #eef2ff;
+      --cyan: #0789b5;
+      --cyan-bg: #eaf9fe;
+      --green: #63870b;
+      --green-bg: #f4f9dc;
+      --orange: #c05e0f;
+      --orange-bg: #fff4e8;
+      --rose: #be3b7b;
+      --rose-bg: #fff0f8;
+      --slate-bg: #eef3f7;
+      --purple: #6c4bd8;
+      --purple-bg: #f3efff;
+      --red: #c2413a;
+      --red-bg: #fff1ef;
+      --shadow: 0 18px 48px rgba(34, 47, 70, 0.08);
+      --radius: 8px;
+    }
+
+    body {
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        linear-gradient(115deg, rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+        repeating-linear-gradient(-16deg, transparent 0 130px, rgba(61,72,92,0.045) 131px 132px, transparent 133px 260px);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+      line-height: 1.55;
+      letter-spacing: 0;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "LibTV Research 2026   LibTV Research 2026   LibTV Research 2026";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      color: rgba(32, 42, 60, 0.035);
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 180px;
+      transform: rotate(-13deg) scale(1.12);
+      white-space: pre-wrap;
+      word-spacing: 96px;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      width: min(1460px, calc(100vw - 48px));
+      margin: 0 auto;
+      padding: 28px 0 34px;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 3.2vw, 44px);
+      line-height: 1.1;
+      font-weight: 850;
+      letter-spacing: 0;
+      color: #111827;
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.78);
+      padding: 7px 10px;
+      border-radius: 999px;
+      color: #465266;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: 148px 1fr;
+      gap: 18px;
+      padding: 20px 22px;
+      background: var(--soft-gray);
+      border-radius: var(--radius);
+      margin-bottom: 28px;
+      border: 1px solid #edf0f4;
+    }
+
+    .summary-title {
+      font-weight: 850;
+      font-size: 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .bullets {
+      display: grid;
+      gap: 8px;
+      list-style-position: outside;
+      padding-left: 22px;
+      font-size: 17px;
+    }
+
+    strong {
+      font-weight: 850;
+      color: #111827;
+    }
+
+    .section {
+      margin-top: 26px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: 850;
+      color: #1b2433;
+      margin-bottom: 16px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid.four {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .card {
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 16px 20px;
+      font-weight: 850;
+      font-size: 18px;
+    }
+
+    .card-head .label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon {
+      width: 22px;
+      height: 22px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 6px;
+      color: white;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .tag {
+      color: rgba(23, 32, 47, 0.7);
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.56);
+      border: 1px solid rgba(255,255,255,0.64);
+      white-space: nowrap;
+    }
+
+    .card-body {
+      padding: 18px 22px 20px;
+      background: rgba(255,255,255,0.9);
+    }
+
+    .card ul {
+      display: grid;
+      gap: 12px;
+      padding-left: 20px;
+      font-size: 16px;
+    }
+
+    .evidence {
+      display: block;
+      margin-top: 6px;
+      padding-left: 10px;
+      border-left: 3px solid rgba(101, 112, 128, 0.24);
+      color: #657080;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .evidence b {
+      color: #334155;
+      font-weight: 850;
+    }
+
+    .blue .card-head { background: var(--blue-bg); color: var(--blue); }
+    .blue .icon { background: var(--blue); }
+    .cyan .card-head { background: var(--cyan-bg); color: var(--cyan); }
+    .cyan .icon { background: var(--cyan); }
+    .green .card-head { background: var(--green-bg); color: var(--green); }
+    .green .icon { background: var(--green); }
+    .orange .card-head { background: var(--orange-bg); color: var(--orange); }
+    .orange .icon { background: var(--orange); }
+    .rose .card-head { background: var(--rose-bg); color: var(--rose); }
+    .rose .icon { background: var(--rose); }
+    .purple .card-head { background: var(--purple-bg); color: var(--purple); }
+    .purple .icon { background: var(--purple); }
+    .red .card-head { background: var(--red-bg); color: var(--red); }
+    .red .icon { background: var(--red); }
+
+    .customer {
+      padding: 18px;
+      min-height: 255px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      border-radius: var(--radius);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .customer-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .customer h3 {
+      font-size: 20px;
+      line-height: 1.2;
+      color: #111827;
+    }
+
+    .customer-type {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .metric-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .metric {
+      border-radius: 7px;
+      padding: 9px 10px;
+      background: #f6f8fb;
+      border: 1px solid #edf0f4;
+    }
+
+    .metric b {
+      display: block;
+      font-size: 16px;
+      color: #111827;
+    }
+
+    .metric span {
+      display: block;
+      color: var(--faint);
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    .customer-note {
+      color: #374151;
+      font-size: 14px;
+      padding-top: 2px;
+    }
+
+    .support {
+      display: grid;
+      gap: 6px;
+      padding: 10px 12px;
+      border-radius: 7px;
+      background: #f8fafc;
+      border: 1px solid #edf1f5;
+      color: #536173;
+      font-size: 13px;
+      line-height: 1.42;
+    }
+
+    .support b {
+      color: #1f2937;
+      font-weight: 850;
+    }
+
+    .customer .mini-list {
+      display: grid;
+      gap: 7px;
+      color: #2c3544;
+      font-size: 14px;
+      padding-left: 18px;
+    }
+
+    .ribbon {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      padding: 8px 5px;
+      border-radius: 6px;
+      background: #111827;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+
+    .customer.yuyu { border-top: 5px solid var(--purple); }
+    .customer.xingmang { border-top: 5px solid var(--green); }
+    .customer.xinshijue { border-top: 5px solid var(--orange); }
+    .customer.biantaian { border-top: 5px solid var(--cyan); }
+
+    .matrix {
+      display: grid;
+      grid-template-columns: 1.1fr 1.2fr 1.2fr 1fr;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    .matrix div {
+      padding: 12px 14px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    .matrix div:nth-child(4n) {
+      border-right: 0;
+    }
+
+    .matrix .head {
+      background: #182033;
+      color: white;
+      font-weight: 850;
+      font-size: 13px;
+    }
+
+    .matrix .axis {
+      font-weight: 850;
+      color: #111827;
+      background: #f7f9fc;
+    }
+
+    .roadmap {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 12px;
+    }
+
+    .priority {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      align-items: stretch;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    .priority-level {
+      display: grid;
+      place-items: center;
+      padding: 16px 10px;
+      font-size: 22px;
+      font-weight: 900;
+      color: white;
+    }
+
+    .priority-body {
+      padding: 16px 18px;
+    }
+
+    .priority-body h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .priority-body p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    .p0 .priority-level { background: var(--red); }
+    .p1 .priority-level { background: var(--orange); }
+    .p2 .priority-level { background: var(--blue); }
+
+    .quote-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .quote {
+      border-radius: var(--radius);
+      padding: 15px 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.9);
+      min-height: 138px;
+    }
+
+    .quote b {
+      display: block;
+      color: #111827;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .quote p {
+      color: #3a4658;
+      font-size: 14px;
+    }
+
+    .footer {
+      margin-top: 26px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--faint);
+      font-size: 13px;
+    }
+
+    .source-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .source-links a {
+      color: #506078;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(80,96,120,0.35);
+    }
+
+    @media (max-width: 1180px) {
+      .grid.four,
+      .quote-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid.three {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100vw - 24px, 720px);
+        padding-top: 18px;
+      }
+
+      .top,
+      .footer {
+        display: block;
+      }
+
+      .meta {
+        margin-top: 14px;
+        grid-template-columns: 1fr;
+      }
+
+      .summary,
+      .grid.two,
+      .grid.four,
+      .quote-strip,
+      .matrix {
+        grid-template-columns: 1fr;
+      }
+
+      .matrix .head {
+        display: none;
+      }
+
+      .matrix div {
+        border-right: 0;
+      }
+
+      .priority {
+        grid-template-columns: 1fr;
+      }
+
+      .priority-level {
+        min-height: 56px;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      body::before {
+        display: none;
+      }
+
+      .page {
+        width: 100%;
+        padding: 0;
+      }
+
+      .card,
+      .customer,
+      .matrix,
+      .priority,
+      .quote {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="top">
+      <div>
+        <h1>LibTV团队版用户访谈汇报</h1>
+        <p class="subtitle">基于胖的n次方、星芒文化、新视觉、彼岸天 4 场团队版访谈 - 2026.05.27-05.28</p>
+      </div>
+      <div class="meta">
+        <div class="pill">4 个客户样本</div>
+        <div class="pill">协作 / 权限 / 算力 / 资产</div>
+        <div class="pill">HTML 汇报面板</div>
+      </div>
+    </header>
+
+    <section class="summary">
+      <div class="summary-title"><span>核心结论</span></div>
+      <ul class="bullets">
+        <li>团队版不能只按“多人协作”理解，真实购买动机分成 <strong>算力池、权限安全、资产复用、项目制生产</strong> 四条线。</li>
+        <li>用户对积分管理基本满意，但 <strong>模型质量、画布权限、历史回溯、功能可发现性</strong> 是影响续费和加购的主要风险。</li>
+        <li>产品方向应从“团队账号权益”升级为 <strong>AI 视频生产工作台</strong>：先补齐权限与版本安全，再把资产库和项目管理做成团队版核心卖点。</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">四类客户画像</h2>
+      <div class="grid four">
+        <article class="customer yuyu">
+          <div class="customer-title">
+            <div>
+              <h3>胖的n次方</h3>
+              <p class="customer-type">真实协同型 · AI 真人短片 / IP 情景剧</p>
+            </div>
+            <div class="ribbon">Figma心智</div>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><b>3 个</b><span>团队版账号</span></div>
+            <div class="metric"><b>11/12</b><span>反馈与 xlsx 对齐</span></div>
+          </div>
+          <p class="customer-note">最像“设计团队协同”用户，核心参照物是 Figma，对权限、历史、协同定位、复制下载保护要求最高。</p>
+          <div class="support">
+            <p><b>支撑：</b>3 个团队版账号因购买批次分散，11/12 条反馈与 xlsx 对齐，痛点集中在 Ctrl+Z、Pages、历史回溯、权限分享、Follow Me。</p>
+            <p><b>原声：</b>“我们本身是 Figma 经常用 Figma，所以基本上就属于一个协作的状态。”</p>
+          </div>
+          <ul class="mini-list">
+            <li>多人编辑 Ctrl+Z 不稳定</li>
+            <li>需要 Pages、历史回溯、Follow Me</li>
+            <li>3 个账号无法合并，形成商业化漏洞</li>
+          </ul>
+        </article>
+
+        <article class="customer xingmang">
+          <div class="customer-title">
+            <div>
+              <h3>星芒文化</h3>
+              <p class="customer-type">算力量产型 · 自营漫剧工作室</p>
+            </div>
+            <div class="ribbon">积分优先</div>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><b>20-30 部</b><span>月产精品剧</span></div>
+            <div class="metric"><b>10 席</b><span>4-6 人团队购买</span></div>
+          </div>
+          <p class="customer-note">买团队版主要为了积分和性价比，不是为了 10 人协作。当前只深用生视频，其他链路还在外部。</p>
+          <div class="support">
+            <p><b>支撑：</b>4-6 人团队购买 10 席，月产 20-30 部精品剧；当前 LibTV 主要承担生视频，生图、脚本、审片仍在外部工具。</p>
+            <p><b>原声：</b>“最主要还是积分”“目前的话就只是用作生成视频这一块。”</p>
+          </div>
+          <ul class="mini-list">
+            <li>3D 画风偏国漫，真人相对可用</li>
+            <li>不知道视频合成功能，依赖教程导入</li>
+            <li>资产传输靠压缩包，音色/三视图可复用</li>
+          </ul>
+        </article>
+
+        <article class="customer xinshijue">
+          <div class="customer-title">
+            <div>
+              <h3>新视觉</h3>
+              <p class="customer-type">项目制协作型 · TVC / 广告片制作</p>
+            </div>
+            <div class="ribbon">项目管理</div>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><b>2-7 人</b><span>按项目配置团队</span></div>
+            <div class="metric"><b>1-2 周</b><span>TVC 制作周期</span></div>
+          </div>
+          <p class="customer-note">从个人版转团队版，团队版创建、邀请、积分分配顺滑，但项目分类、主体管理和分享保护不足。</p>
+          <div class="support">
+            <p><b>支撑：</b>纪要记录其先买个人版，后因多人协作转团队版；项目按 2-7 人配置，TVC 常见分工为总控、出图、生视频、剪辑。</p>
+            <p><b>纪要原文：</b>“创建团队、邀请成员、分配积分流程丝滑，积分消耗清晰；主体类别缺乏项目分类。”</p>
+          </div>
+          <ul class="mini-list">
+            <li>个人版积分无法顺滑转团队版</li>
+            <li>主体缺少项目分类，内容混乱</li>
+            <li>需隐藏提示词、分级授权、补音乐音效</li>
+          </ul>
+        </article>
+
+        <article class="customer biantaian">
+          <div class="customer-title">
+            <div>
+              <h3>彼岸天</h3>
+              <p class="customer-type">精品长片型 · 高 ARPU 影视级制作</p>
+            </div>
+            <div class="ribbon">安全效率</div>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><b>20 万</b><span>5 月采购 ARPU</span></div>
+            <div class="metric"><b>1000+</b><span>单项目镜头量级</span></div>
+          </div>
+          <p class="customer-note">LibTV 已过“能不能用”门槛，进入专业打磨期。P0 是画布权限和多组图原图预览。</p>
+          <div class="support">
+            <p><b>支撑：</b>5 月采购 20 万，单项目 1000-2000 镜头，6 月进入生产高峰；客户主动把权限和原图预览排为最高权重。</p>
+            <p><b>原声：</b>“整体工具其实已经做得很好了”“前面第一个权限和放大图原图有机会解决一下。”</p>
+          </div>
+          <ul class="mini-list">
+            <li>画布按人设置预览/编辑权限</li>
+            <li>多组图需全屏看原图细节</li>
+            <li>席位、续费、积分规则解释成本高</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">使用反馈与痛点</h2>
+      <div class="grid two">
+        <article class="card blue">
+          <div class="card-head">
+            <div class="label"><span class="icon">A</span><span>购买与协作体验</span></div>
+            <span class="tag">商业化侧</span>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>
+                <strong>积分池是强购买动机</strong>：星芒买 10 席主要为 10 份积分，新视觉也认为 LibTV 积分更便宜。
+                <span class="evidence"><b>用户原声：</b>星芒：“最主要还是积分，积分比较合适。”</span>
+              </li>
+              <li>
+                <strong>协作不是单一形态</strong>：胖的n次方是真协同，彼岸天是章节分包，星芒是一人一剧，新视觉按项目组流转。
+                <span class="evidence"><b>用户原声：</b>胖的n次方：“我们本身是 Figma 经常用 Figma，所以基本上就属于一个协作的状态。”</span>
+              </li>
+              <li>
+                <strong>团队版迁移有摩擦</strong>：个人版到团队版、多个团队账号合并、续费和新增席位规则都需要降低解释成本。
+                <span class="evidence"><b>用户原声：</b>彼岸天：“感觉有点信息有点交叉，要不补充个文档，我们看看理解有没有偏差。”</span>
+              </li>
+              <li>
+                <strong>管理者要“看得懂”</strong>：积分消耗、画布进度、成员角色、项目归属要可视化，而不是只给一个总额度。
+                <span class="evidence"><b>用户原声：</b>星芒：“方便我们及时调整，比如说他有的不够用了，我们就方便及时给他调整。”</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card cyan">
+          <div class="card-head">
+            <div class="label"><span class="icon">B</span><span>产品功能痛点</span></div>
+            <span class="tag">产品侧</span>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>
+                <strong>画布安全不足</strong>：误删、权限过粗、复制下载不可控，头部客户会把这视为生产风险。
+                <span class="evidence"><b>用户原声：</b>彼岸天：“画布里面每个画布对所有成员都开放，能随便删一些内容。”</span>
+              </li>
+              <li>
+                <strong>资产管理混乱</strong>：角色、人设、镜头中间产物、音色、场景没有清晰分类，用户仍用本地/NAS/压缩包。
+                <span class="evidence"><b>用户原声：</b>星芒：“需要传输的话，有的时候就丢个压缩包，这个确实有一点麻烦。”</span>
+              </li>
+              <li>
+                <strong>基础效率细节掉分</strong>：Ctrl+Z、局部整理、全屏预览、宫格裁剪、文本光标、iPad 输入框都影响专业用户耐心。
+                <span class="evidence"><b>用户原声：</b>胖的n次方：“特别是两个人都在发布里的情况下，Ctrl+Z 完全是用不了的。”</span>
+              </li>
+              <li>
+                <strong>功能可发现性差</strong>：快捷键、资产库、视频合成已有或部分已有，但高 ARPU 客户仍不知道。
+                <span class="evidence"><b>用户原声：</b>星芒：“没有，目前不知道这个功能。你们可以给我们一个使用教程。”</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">需求与改进方向</h2>
+      <div class="grid three">
+        <article class="card green">
+          <div class="card-head">
+            <div class="label"><span class="icon">1</span><span>权限管理与分享</span></div>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>
+                画布级 <strong>预览 / 评论 / 编辑</strong> 分级权限。
+                <span class="evidence"><b>用户原声：</b>彼岸天：“某些人只有预览权限，不能改动；有些人有协作和编辑权限。”</span>
+              </li>
+              <li>
+                分享外部客户时，默认关闭 <strong>复制 / 下载</strong>。
+                <span class="evidence"><b>用户原声：</b>胖的n次方：“应优先保障内容不被他人复制。”</span>
+              </li>
+              <li>
+                可实时看到访问者、权限状态，并支持无感调整。
+                <span class="evidence"><b>用户原声：</b>胖的n次方：“要能看到实时谁在看，最好右上角显示团队头像和他们的权限。”</span>
+              </li>
+              <li>
+                补充副管理员、成员备注、操作日志，适配 15-20 人团队。
+                <span class="evidence"><b>用户原声：</b>彼岸天：“希望团队增加设置管理员，可以再多一到两个。”</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card orange">
+          <div class="card-head">
+            <div class="label"><span class="icon">2</span><span>资产管理与复用</span></div>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>
+                把角色、人设、三视图、场景、音色、镜头图区分管理。
+                <span class="evidence"><b>用户原声：</b>彼岸天：“人物设定这些资产如果能分得开一点会好一点。”</span>
+              </li>
+              <li>
+                支持项目资产库和跨项目复用，避免继续靠压缩包传输。
+                <span class="evidence"><b>用户原声：</b>星芒：“传上去，后续如果还想用，也可以拿出来就用。”</span>
+              </li>
+              <li>
+                引入人物训练集批量生成模板，减少大量重复复制提示词。
+                <span class="evidence"><b>用户原声：</b>彼岸天：“100 个组提示词全部复制一遍，然后再弄，就有点麻烦。”</span>
+              </li>
+              <li>
+                允许项目级 Prompt Skill，沉淀每个项目的风格与前后缀。
+                <span class="evidence"><b>用户原声：</b>彼岸天：“不同项目，你可以自己给他的 skill 是不一样的。”</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card rose">
+          <div class="card-head">
+            <div class="label"><span class="icon">3</span><span>画布效率与版本</span></div>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>
+                修复多人协同下 Ctrl+Z、局部整理排序、文本光标等高频问题。
+                <span class="evidence"><b>用户原声：</b>胖的n次方：“一整理完自己找不到东西了。”</span>
+              </li>
+              <li>
+                提供画布 Pages、版本历史、30 天回收站、生成者归属。
+                <span class="evidence"><b>用户原声：</b>彼岸天：“画布如果被删除的话，现在是不是还没有什么办法找回？”</span>
+              </li>
+              <li>
+                多组图支持直接全屏原图预览，不再下载后判断细节。
+                <span class="evidence"><b>用户原声：</b>彼岸天：“只能下载下来再看这张图到底我们能不能用。”</span>
+              </li>
+              <li>
+                点击头像定位、Follow Me、带定位评论可作为协同 Beta 能力。
+                <span class="evidence"><b>用户原声：</b>胖的n次方：“点击头像可以直接定位到对方所在的区域。”</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">客户分层与产品打法</h2>
+      <div class="matrix">
+        <div class="head">客户类型</div>
+        <div class="head">核心购买理由</div>
+        <div class="head">最该先满足</div>
+        <div class="head">产品定位</div>
+
+        <div class="axis">协同创作型</div>
+        <div>多人同时做画布，需要外部分享和权限保护。</div>
+        <div>Figma 式协作、权限可见、历史回溯、复制下载保护。</div>
+        <div>协作画布</div>
+
+        <div class="axis">算力量产型</div>
+        <div>个人版积分不够，买团队版是为了更便宜的大额度积分。</div>
+        <div>积分池、消耗预警、功能导入、模型稳定性。</div>
+        <div>团队算力包</div>
+
+        <div class="axis">项目制生产型</div>
+        <div>按 TVC / 广告片项目组织 2-7 人，关注项目留痕。</div>
+        <div>项目分类、主体管理、分享隐藏敏感内容、音效库。</div>
+        <div>项目工作台</div>
+
+        <div class="axis">精品长片型</div>
+        <div>镜头量巨大，团队多人分章节生产，质量和安全要求高。</div>
+        <div>画布权限、原图预览、版本管理、Prompt 模板、规则透明。</div>
+        <div>专业生产系统</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">优先级建议</h2>
+      <div class="grid">
+        <article class="priority p0">
+          <div class="priority-level">P0</div>
+          <div class="priority-body">
+            <h3>先保住生产安全与续费信任</h3>
+            <ul>
+              <li>画布权限分级、复制/下载独立控制、30 天回收站。</li>
+              <li>修复多人 Ctrl+Z、局部整理排序、多组图全屏预览。</li>
+              <li>发布清晰的团队版席位、续费、积分规则说明。</li>
+            </ul>
+            <p>理由：彼岸天和胖的n次方会把这些视为“能不能放进真实生产”的底线。</p>
+          </div>
+        </article>
+
+        <article class="priority p1">
+          <div class="priority-level">P1</div>
+          <div class="priority-body">
+            <h3>把团队版从积分包做成项目生产面板</h3>
+            <ul>
+              <li>项目分类、主体分类、成员备注、副管理员、消耗报表。</li>
+              <li>资产库重构：角色 / 三视图 / 场景 / 音色 / 镜头产物分开。</li>
+              <li>新手导入：视频合成、快捷键、资产库、分享权限做成客户成功清单。</li>
+            </ul>
+            <p>理由：星芒和新视觉的痛点说明，产品力不是没有，而是缺入口、缺分类、缺解释。</p>
+          </div>
+        </article>
+
+        <article class="priority p2">
+          <div class="priority-level">P2</div>
+          <div class="priority-body">
+            <h3>做差异化能力，而不是一口吃完整工作流</h3>
+            <ul>
+              <li>项目级 Prompt Skill、人物训练集批量生成、画布 Pages。</li>
+              <li>音频/音效库、短漫剧音乐链路、与剪映/NAS/本地工作流的导出衔接。</li>
+              <li>围绕 Figma 心智做协同 Beta，对胖的n次方长期跟进。</li>
+            </ul>
+            <p>理由：四家都没有要求 LibTV 完全替代剪映、NAS、Figma 或传统剧本流程，核心是把出图和出视频两段做得更专业。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">用户原声证据</h2>
+      <div class="quote-strip">
+        <div class="quote">
+          <b>胖的n次方</b>
+          <p>“我们本身是 Figma 经常用 Figma，所以基本上就属于一个协作的状态。”</p>
+        </div>
+        <div class="quote">
+          <b>星芒文化</b>
+          <p>“最主要还是积分，积分比较合适。”</p>
+        </div>
+        <div class="quote">
+          <b>新视觉</b>
+          <p>“项目管理分类清晰、留痕复盘，是 LibTV 可以参考的地方。”</p>
+        </div>
+        <div class="quote">
+          <b>彼岸天</b>
+          <p>“整体工具其实已经做得很好了，问题在细节优化上。”</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>内容由 AI 基于 4 份飞书访谈总结与本地访谈沉淀生成 · 2026-05-29</div>
+      <div class="source-links">
+        <a href="https://resonate.feishu.cn/wiki/J7iYw159ziXtoQktGEzcclA1nke">鱼鱼</a>
+        <a href="https://resonate.feishu.cn/docx/RFMNdetjyowlT1xIik8cUIR6ncj">星芒</a>
+        <a href="https://resonate.feishu.cn/docx/GWOmdLyayo43e2xc7qjcxD2Qnkc">新视觉</a>
+        <a href="https://resonate.feishu.cn/docx/NqqzdWKjDo4K6IxDAuQcjIT8n7b">彼岸天</a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
